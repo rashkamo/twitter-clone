@@ -53,7 +53,7 @@ function postPage({ trendingResults, followResults, providers }) {
         <title>
           {post?.username} on Twitter: "{post?.text}"
         </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={session.user.image} />
       </Head>
       <main className="bg-[#0d131a] flex min-h-screen max-w-[1500px] mx-auto">
         <Sidebar />
