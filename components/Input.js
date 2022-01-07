@@ -87,26 +87,34 @@ function Input() {
       />
       <div className="w-full divide-y divide-gray-700 ">
         <div className={`${selectedFile && "pb-7"} ${input && "space-y-2.5"}`}>
-          <textarea
-            rows="2"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="what's hapenning"
-            className="bg-transparent outline-none text-[#d9d9d9] text-large placeholder-gray-500 tracking-wide min-h-[50px] max-h-[50px] w-full "
-          ></textarea>
-          {selectedFile && (
-            <div className="relative">
-              <div
-                className="absolute w-8 h-8 bg-[#15181c] hover:bg-[#272c26] rounded-full bg-opacity-75 flex items-center justify-center top-1 left-1 cursor-pointer"
-                onClick={() => setSelectedFile(null)}
-              >
-                <XIcon className="text-white" />
-              </div>
-              <img
-                src={selectedFile}
-                alt=""
-                className="rounded-2xl max-h-80 object-contain "
-              />
+          {loading ? (
+            <div>
+              <img src="images/newLoader.svg" alt="" />
+            </div>
+          ) : (
+            <div>
+              <textarea
+                rows="2"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="what's hapenning"
+                className="bg-transparent outline-none text-[#d9d9d9] text-large placeholder-gray-500 tracking-wide min-h-[50px] max-h-[50px] w-full "
+              ></textarea>
+              {selectedFile && (
+                <div className="relative">
+                  <div
+                    className="absolute w-8 h-8 bg-[#15181c] hover:bg-[#272c26] rounded-full bg-opacity-75 flex items-center justify-center top-1 left-1 cursor-pointer"
+                    onClick={() => setSelectedFile(null)}
+                  >
+                    <XIcon className="text-white" />
+                  </div>
+                  <img
+                    src={selectedFile}
+                    alt=""
+                    className="rounded-2xl max-h-80 object-contain "
+                  />
+                </div>
+              )}
             </div>
           )}
         </div>

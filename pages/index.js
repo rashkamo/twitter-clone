@@ -7,6 +7,7 @@ import Modal from "../components/Modal";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
 import Widget from "../components/Widget";
+import Bottombar from "../components/Bottombar";
 
 export default function Home({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -18,7 +19,7 @@ export default function Home({ trendingResults, followResults, providers }) {
         <title>Twitter | Home</title>
         <link rel="icon" href="https://rb.gy/ogau5a" />
       </Head>
-      <main className="bg-[#0d131a] min-h-screen max-w-[1500px] flex mx-auto">
+      <main className="bg-[#0d131a] min-h-screen max-w-[1500px] flex relative mx-auto">
         <Sidebar />
         <Feed />
         <Widget
@@ -26,6 +27,9 @@ export default function Home({ trendingResults, followResults, providers }) {
           followResults={followResults}
         />
         {isOpen && <Modal />}
+        <div className="fixed bottom-0 left-0 right-0 w-[100%]">
+          <Bottombar />
+        </div>
       </main>
     </div>
   );
