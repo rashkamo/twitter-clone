@@ -113,6 +113,7 @@ function Input() {
                     alt=""
                     className="rounded-2xl max-h-80 object-contain "
                   />
+                  <video src={selectedFile}></video>
                 </div>
               )}
             </div>

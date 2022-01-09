@@ -16,7 +16,7 @@ export default function Home({ trendingResults, followResults, providers }) {
   return (
     <div className="">
       <Head>
-        <title>Twitter | Home</title>
+        <title>Home</title>
         <link rel="icon" href="https://rb.gy/ogau5a" />
       </Head>
       <main className="bg-[#0d131a] min-h-screen max-w-[1500px] flex relative mx-auto">
