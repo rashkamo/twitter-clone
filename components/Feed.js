@@ -27,7 +27,7 @@ function Feed() {
   return (
     <div
       className="text-white flex-1 
-     border-l border-r border-blue-400 max-w-2xl sm:ml-[73px] xl:ml-[370px]"
+     border-l border-r border-gray-700 max-w-2xl sm:ml-[73px] xl:ml-[370px]"
     >
       <div className="text-[#d9d9d9] flex items-center justify-center sm:justify-between py-2 px-3 sticky top-0 z-50 bg-[#0d131a] border-b border-gray-700">
         <h2 className="font-bold">Home</h2>

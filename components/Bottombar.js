@@ -16,7 +16,7 @@ import {
 function Bottombar() {
   const { data: session } = useSession();
   return (
-    <div className="flex items-center sm:hidden justify-center bg-[#000] space-x-1 ">
+    <div className="flex items-center sm:hidden justify-center bg-[#000] rounded-t-[10px] space-x-1 ">
       <SidebarLink text="Home" Icon={HomeIcon} active />
 
       <SidebarLink text="Explore" Icon={HashtagIcon} />
