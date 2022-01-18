@@ -24,14 +24,21 @@ function Sidebar() {
           <Image src="https://rb.gy/ogau5a" width={28} height={28} />
         </div>
         <div className="space-y-0.5 mt-4 mb-2.5 xl:ml-20 ">
-          <SidebarLink text="Home" Icon={HomeIcon} active />
-
+          <Link href="/">
+            <a>
+              <SidebarLink text="Profile" Icon={HomeIcon} active />
+            </a>
+          </Link>
           <SidebarLink text="Explore" Icon={HashtagIcon} />
           <SidebarLink text="Notifications" Icon={BellIcon} />
           <SidebarLink text="Messages" Icon={InboxIcon} />
           <SidebarLink text="Bookmarks" Icon={BookmarkIcon} />
           <SidebarLink text="Lists" Icon={ClipboardListIcon} />
-          <SidebarLink text="Profile" Icon={UserIcon} />
+          <Link href="/user">
+            <a>
+              <SidebarLink text="Profile" Icon={UserIcon} />
+            </a>
+          </Link>
           <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
         </div>
         <button className="hidden xl:inline ml-auto bg-[#1d9bf0] rounded-full w-56 h-[52px] text-white text-lg shadow-md hover:bg-[#1a8cd8]">
