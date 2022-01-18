@@ -67,10 +67,15 @@ function user({ trendingResults, followResults, providers, postPage }) {
             />
             <div className="font-bold group   ">
               <h1 className="">{session.user.name}</h1>
-              <p className="group-hover:underline group-hover:text-blue-300 text-blue-300">
+              <p className="group-hover:underline group-hover:text-blue-300 text-[#1d9bf0]">
                 @{session.user.tag}
               </p>
             </div>
+          </div>
+          <div className="text-white flex items-center justify-center xl:justify-start  space-x-1.5 border-b border-gray-700 pb-2">
+            <h1 className="bg-[#1d9bf0] px-[20px] py-[10px] ml-2 mt-2 rounded-full   ">
+              Posts
+            </h1>
           </div>
           {posts.map((post) => {
             const data = post.data();
