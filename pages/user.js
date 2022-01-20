@@ -21,6 +21,7 @@ import Login from "../components/Login";
 import Modal from "../components/Modal";
 import Post from "../components/Post";
 import Sidebar from "../components/Sidebar";
+import Bottombar from "../components/Bottombar";
 import { db } from "../firebase";
 import Widget from "../components/Widget";
 import Moment from "react-moment";
@@ -45,7 +46,11 @@ function user({ trendingResults, followResults, providers, postPage }) {
   //console.log(post);
 
   return (
-    <div className="text-white">
+    <div className="text-white ">
+      <Head>
+        <title>@{session.user.name}</title>
+        <link rel="icon" href="images/favicon.ico" />
+      </Head>
       <Sidebar />
       <div
         className="text-white flex-1 
@@ -54,7 +59,7 @@ function user({ trendingResults, followResults, providers, postPage }) {
         <div className="border-b border-gray-700">
           <Link href="/">
             <a>
-              <ArrowLeftIcon className="h-[25px] w-[40px] " />
+              <ArrowLeftIcon className="h-[25px] w-[40px]" />
             </a>
           </Link>
         </div>
@@ -63,7 +68,7 @@ function user({ trendingResults, followResults, providers, postPage }) {
             <img
               src={session.user.image}
               alt=""
-              className="rounded-full pr-3"
+              className=" rounded-full p-3"
             />
             <div className="font-bold group   ">
               <h1 className="">{session.user.name}</h1>
@@ -72,8 +77,8 @@ function user({ trendingResults, followResults, providers, postPage }) {
               </p>
             </div>
           </div>
-          <div className="text-white flex items-center justify-center xl:justify-start  space-x-1.5 border-b border-gray-700 pb-2">
-            <h1 className="bg-[#1d9bf0] px-[20px] py-[10px] ml-2 mt-2 rounded-full   ">
+          <div className="text-white flex items-center justify-start xl:justify-start space-x-1.5 border-b border-gray-700 pb-2">
+            <h1 className="bg-[#1d9bf0] px-[40px] py-[10px] font-bold ml-2 mt-2 rounded-full   ">
               Posts
             </h1>
           </div>
@@ -83,10 +88,7 @@ function user({ trendingResults, followResults, providers, postPage }) {
             return (
               <div key={post?.id}>
                 {session.user.uid === data?.id && (
-                  <div
-                    className="p-3 flex cursor-pointer border-b border-gray-700"
-                    onClick={() => router.push(`/${id}`)}
-                  >
+                  <div className="p-3 flex cursor-pointer border-b border-gray-700">
                     {!postPage && (
                       <img
                         src={data?.userImg}
@@ -164,6 +166,9 @@ function user({ trendingResults, followResults, providers, postPage }) {
             );
           })}
         </div>
+      </div>
+      <div className="fixed bottom-0 left-0 right-0 w-[100%]">
+        <Bottombar />
       </div>
     </div>
   );

@@ -17,9 +17,9 @@ export default function Home({ trendingResults, followResults, providers }) {
     <div className="">
       <Head>
         <title>Home</title>
-        <link rel="icon" href="https://rb.gy/ogau5a" />
+        <link rel="icon" href="images/favicon.ico" />
       </Head>
-      <main className="bg-[#0d131a] min-h-screen max-w-[1500px] flex relative mx-auto">
+      <main className="bg-[#0d131a] min-h-screen max-w-[1500px] flex relative mx-auto no-scrollbar">
         <Sidebar />
         <Feed />
         <Widget
@@ -27,7 +27,7 @@ export default function Home({ trendingResults, followResults, providers }) {
           followResults={followResults}
         />
         {isOpen && <Modal />}
-        <div className="fixed bottom-0 left-0 right-0 w-[100%]">
+        <div className="fixed bottom-0 left-0 right-0 h-[50px] w-[100%]">
           <Bottombar />
         </div>
       </main>

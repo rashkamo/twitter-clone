@@ -18,9 +18,12 @@ import Link from "next/link";
 function Bottombar() {
   const { data: session } = useSession();
   return (
-    <div className="flex items-center sm:hidden justify-center bg-[#000] rounded-t-[10px] space-x-10 ">
-      <SidebarLink text="Home" Icon={HomeIcon} active />
-
+    <div className="flex items-center sm:hidden justify-center bg-[#15202c] rounded-t-[10px] space-x-10 ">
+      <Link href="/">
+        <a>
+          <SidebarLink text="Home" Icon={HomeIcon} active />
+        </a>
+      </Link>
       <SidebarLink text="Notifications" Icon={BellIcon} />
       <Link href="/user">
         <a>

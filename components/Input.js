@@ -98,7 +98,7 @@ function Input() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Create a post!"
-                className="bg-transparent outline-none text-[#d9d9d9] text-large placeholder-gray-500 tracking-wide min-h-[50px] max-h-[50px] w-full "
+                className="bg-transparent outline-none text-[#d9d9d9] text-large placeholder-gray-500 tracking-wide min-h-[50px] max-h-[50px] w-full no-scrollbar "
               ></textarea>
               {selectedFile && (
                 <div className="relative">
